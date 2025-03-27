@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.project_name }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-md text-center">
+        <img src="public/static/{{ project.image_path }}" alt="{{ project.project_name }}" class="mx-auto w-40 rounded-md">
+        <h1 class="text-2xl font-bold mt-4">{{ project.project_name }}</h1>
+        <h3 class="text-lg mt-4">Doc ID: {{ project.id_doctor }}</h3>
+        <h3 class="text-lg mt-4">Stringa Chiamante: {{ project.call_string }}</h3>
+        <p class="text-lg mt-2">Performance: <span class="font-semibold {% if project.performance < 33 %}text-red-600{% elseif project.performance <= 66 %}text-yellow-600{% else %}text-green-600{% endif %}">{{ project.performance }}%</span></p>
+        <a href="/" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">Torna alla Home</a>
+    </div>
+
+</body>
+</html>
