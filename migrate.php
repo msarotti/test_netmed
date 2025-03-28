@@ -1,4 +1,4 @@
-<?php 
+<?php
 declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -26,7 +26,7 @@ $query = "CREATE TABLE IF NOT EXISTS projects (
 )";
 $result = $connection->query($query);
 
-$insertQuery = "INSERT INTO projects (project_id, project_name, performance, image_path, id_doctor) VALUES
+$insertQuery = "INSERT INTO projects (project_name, performance, image_path, id_doctor) VALUES
 ('Diabete Mellito', 70, 'img/diabete.jpg', 1),
 ('Ipertensione arteriosa', 34, 'img/pressione.jpg', 2),
 ('Bpco', 26, 'img/bpco.jpg', 2),
